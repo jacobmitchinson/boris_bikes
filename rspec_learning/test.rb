@@ -1,3 +1,7 @@
-def test
-  puts "hello there this is a test"
- end
+require './greeter.rb'
+
+describe 'Greeter' do
+	it 'greets Rico' do
+		expect(greet('Rico')).to eq 'Hello, Rico, how are you today?'
+	end
+end
