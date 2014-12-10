@@ -3,8 +3,8 @@ module BikeContainer
 	DEFAULT_CAPACITY = 10 
 
     def bikes
-		  @bike ||= [] 
-	  end
+	  @bike ||= [] 
+	end
 
     def capacity
     	@capacity ||= DEFAULT_CAPACITY
