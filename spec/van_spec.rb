@@ -11,13 +11,13 @@ describe Van do
 
   it 'should accept fixed bikes from the garage' do
     garage.accept(bike)
-    van.take_available_bikes(garage.bikes)
+    van.dock(garage.release(bike))
     expect(van.bike_count).to eq(1)
   end
 
   it 'should release bikes into the station' do
     van.dock(bike)
-    van.release(station.bikes)
+    station.dock(van.release(bike))
     expect(station.bike_count).to eq(1)
   end
 
