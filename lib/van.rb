@@ -1,6 +1,6 @@
 require_relative 'bike_container'
 require_relative 'bike'
-
+require_relative 'release_unavailable_bikes'
 
 class Van
 
@@ -19,6 +19,9 @@ class Van
       dock(new_bike)
 		end
   end
+
+
+
 
   
 end
