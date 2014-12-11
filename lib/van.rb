@@ -4,6 +4,7 @@ require_relative 'release_unavailable_bikes'
 
 class Van
 
+  include ReleaseUnavailableBikes
 	include BikeContainer
 
 	def take(transfer) 

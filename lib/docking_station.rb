@@ -10,6 +10,7 @@ class DockingStation
     self.capacity = options.fetch(:capacity, capacity)
   end
 
-  
 
+
+  
 end
