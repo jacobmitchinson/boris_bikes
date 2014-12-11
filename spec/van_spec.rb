@@ -11,7 +11,7 @@ describe Van do
 
   it 'should accept fixed bikes from the garage' do
     garage.accept(bike)
-    van.take(garage.bikes)
+    van.take_available_bikes(garage.bikes)
     expect(van.bike_count).to eq(1)
   end
 
@@ -21,12 +21,12 @@ describe Van do
     expect(station.bike_count).to eq(1)
   end
 
-  # it 'should accept bikes from the station that are broken' do
-  #   bike.break!
-  #   station.dock(bike)
-  #   van.take_broken_bikes(station.bikes)
-  #   expect(van.bikes[0]).to be_broken
-  # end
+  it 'should accept bikes from the station that are broken' do
+    bike.break!
+    station.dock(bike)
+    van.take_unavailable_bikes(station.release_unavailable_bikes)
+    expect(van.bike_count).to eq(1)
+  end
 
   # it 'should not take fixed bikes from the station' do 
   #   station.dock(bike)
@@ -43,5 +43,12 @@ describe Van do
   #   van.take_broken_bikes(station)
   #   expect(station.bike_count).to eq(1)
   # end
+
+  it 'should release broken bikes into the garage' do
+    bike.break!
+    van.dock(bike)
+    garage.take_unavailable_bikes(van.release_unavailable_bikes)
+    expect(garage.bike_count).to eq (1)
+  end
         
 end
