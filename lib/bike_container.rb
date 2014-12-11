@@ -23,8 +23,14 @@ module BikeContainer
     bikes << bike
   end
 
-  def release(bike)
-    bikes.delete(bike)
+  def release(bike = '')
+    if !bikes.empty? && bike.is_a?(Bike) 
+      bikes.delete(bike)
+    elsif bike == '' || !bike.is_a?(Bike)
+      raise 'No bikes specified'
+    else
+      raise 'There are no bikes!' 
+    end
   end
 
   def full?
