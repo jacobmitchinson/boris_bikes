@@ -19,7 +19,7 @@ To begin to use OOP, OOD, and TDD we modelled the London Boris Bikes network. Th
 5. Build the van 
 6. Module extraction 
 
-### To do 
+### Status
 
 > * [x] = Done
 
