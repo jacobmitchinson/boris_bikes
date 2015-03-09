@@ -2,7 +2,7 @@ Makers Academy Week One
 
 ### Introduction
 
-To begin to use OOP, OOD, and TDD we were asked to model the London Boris Bikes network. The system had to be capable of: 
+To begin to use OOP, OOD, and TDD we modelled the London Boris Bikes network. The system had to be capable of: 
 
 - Having a docking station to dock bikes
 - Bikes must be able to be rented and returned
