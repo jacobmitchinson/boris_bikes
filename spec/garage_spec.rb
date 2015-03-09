@@ -10,6 +10,5 @@ describe Garage do
 	  garage.accept(bike)
 	  expect(bike).not_to be_broken
 	end
-
-
+  
 end
