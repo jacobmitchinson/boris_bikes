@@ -10,6 +10,5 @@ class Garage
 	  bike.fix!
 	  dock(bike)
 	end
-	
-
+  
 end
