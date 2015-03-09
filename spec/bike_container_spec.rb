@@ -45,9 +45,7 @@ describe BikeContainer do
     docked_bike = holder.unavailable_bikes[0]
     expect(docked_bike).to be_broken
   end
-
   
-
 end
 
 
