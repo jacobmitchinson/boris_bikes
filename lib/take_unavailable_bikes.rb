@@ -5,4 +5,5 @@ module TakeUnavailableBikes
       dock(bike)
     end
   end
+  
 end
